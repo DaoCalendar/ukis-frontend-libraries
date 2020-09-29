@@ -98,9 +98,9 @@ export interface ILayerOptions {
   continuousWorld?: boolean;
   attribution?: string;
   displayName?: string;
-  description?: string;
+  description?: string | IDynamicComponent;
   time?: string;
-  /** zIndex: DEPRECIATED handeld internal by the layer service */
+  /** zIndex: DEPRECATED handled internally by the layer service */
   zIndex?: number;
   minResolution?: number;
   maxResolution?: number;
@@ -207,7 +207,7 @@ export class Layer implements ILayerOptions {
   continuousWorld = false;
   attribution?: string;
   displayName?: string;
-  description?: string;
+  description?: string | IDynamicComponent;
   protected protTime?: string;
   minResolution?: number;
   maxResolution?: number;
